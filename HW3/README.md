@@ -3,7 +3,7 @@
 ## Pipeline to achieve
 ![alt text](https://github.com/sthiruvallur/w251-spring2020/blob/3ea98473c5887e944bd26ab0324fc0f2a253e8e4/HW3/end_to_end_workflow.png "End to End workflow")
 
-## Steps to replicate the workflow
+## Steps to set up the pipeline
    The brokers on cloud and jetson will be instantiated first so that the bridge is activated
    
    Pls review the bridge configs under jetson_broker_src and cloud_broker for details on bridge setup.
