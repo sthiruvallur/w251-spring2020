@@ -60,4 +60,4 @@ Face detector is then launched on the Jetson TX2. It uses the Open CV library to
 
 The face detector source requires to be run in a priviliged container, which will require user authentication to accord appropriate access
 
-With the pipeline set up complete, the images should be persisted on S3 Cloud object store such as [S3 object url](cos://us-east/w251-homework3/detect_facesae27c85e-e825-4451-b958-dbaf496fe421.png)
+With the pipeline set up complete, the images should be persisted on S3 Cloud object store such as [S3 object url](https://cloud.ibm.com/objectstorage/crn%3Av1%3Abluemix%3Apublic%3Acloud-object-storage%3Aglobal%3Aa%2F326c3ee185184be698c4e12a96575777%3A2c613095-e2c4-4dda-8314-8e1022dc4694%3A%3A?paneId=manage)
