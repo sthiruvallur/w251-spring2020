@@ -1,0 +1,50 @@
+1. What is TensorFlow? Which company is the leading contributor to TensorFlow?
+   Tensorflow is an open source software platform that is primarily used for deep learning applications in the machine learning space. Google is the leading contributor to Tensorflow
+
+2. What is TensorRT? How is it different from TensorFlow?
+    TensorRT is a high performance SDK provided by Nvidia that is also used for deep learning applications. 
+
+    However TensorRT (Tensor Runtime) as the name implies is used for execution and inference of machine learning applications as opposed to development of the same. TensorRT promises low latency high throughput systems and can be coupled with Tensorflow library, where in the models developed with Tensorflow can be executed with TensorRT
+
+3. What is ImageNet? How many images does it contain? How many classes?
+    ImageNet is an enormous visual database that is dedicated to furthering researching in image/object recognition. It has attained huge significance in its impact on state of art deep learning frameworks achieved for computer vision.
+
+    There are more than 14 million images that have been hand annotated of which more than 1 million images have bounding boxes provided.
+    ImageNet has more than 20,000 categories of images
+
+4. Please research and explain the differences between MobileNet and GoogleNet (Inception) architectures.
+    GoogleNet is a state of the art architecture that is based on Inception architecture, which expands the network wider to achieve high performance. GoogleNet achieved this architecture with high computation efficiency which helped in reducing the cost during application.
+
+    MobileNet architecture was created to address the need of applying deep learning architecture on low resource computationally limited platforms such as mobile devices and embedded hardwares (IOT) devices. Computational complexity was simplified through a principle of factorized convolutions known as depthwise separable convolution.
+
+5. In your own words, what is a bottleneck?
+    A bottleneck is the layer just below the final output layer in a fully connected neural network. The name is derived from the fact the layer is significantly narrow compared to the earlier layer in terms of nodes. 
+
+    The goal of bottleneck is to provide a compact representation of the network, which is significant when the network is used for re-training models during transfer learning. In this case the nodes in the earlier layers are cached providing significant cost savings.
+
+6. How is a bottleneck different from the concept of layer freezing?
+     These are two different techniques to apply during transfer learning for efficiency. 
+
+     Layer freezing is done by freezing the weights of a previously trained model so that they are not updated during re-training process during back propagation.
+
+     Bottleneck is to identify a compact layer in the FNN and caching the earlier layers. The structure of the bottleneck layer helps in significantly reducing the dimensionality of the input during the transfer learning process.
+
+7. the TF1 lab, you trained the last layer (all the previous layers retain their already-trained state). Explain how the lab used the 
+    previous layers (where did they come from? how were they used in the process?)
+    
+    The lab is using the cached results of the previous layers, essentially the outputs from the previous layers and only re-training the bottleneck layer using the images downloaded.
+
+    The previous layers of the MobileNet come from a previously trained model on a Large Visual Recognition Challenge dataset, which is a subset of the large ImageNet database.
+
+
+8. How does a low --learning_rate (step 7 of TF1) value (like 0.005) affect the precision? How much longer does training take?
+   
+   With the Learning rate set to 0.005 the validation accuracy rose to 89% and took 16 minutes 17 secs
+
+9. How about a --learning_rate (step 7 of TF1) of 1.0? Is the precision still good enough to produce a usable graph?
+    When the learning rate was set to 1.0 both
+
+10. For step 8, you can use any images you like. Pictures of food, people, or animals work well. You can even use ImageNet images. How 
+    accurate was your model? Were you able to train it using a few images, or did you need a lot?
+
+    
