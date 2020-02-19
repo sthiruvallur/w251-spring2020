@@ -46,5 +46,14 @@
 
 10. For step 8, you can use any images you like. Pictures of food, people, or animals work well. You can even use ImageNet images. How 
     accurate was your model? Were you able to train it using a few images, or did you need a lot?
+    I used images of stanford_dogs : http://vision.stanford.edu/aditya86/ImageNetDogs/main.html . I got validation accuracy of 71.0 %. 
+    I trained on 20,580 images across 120 categories.
 
-    
+11. Run the TF1 script on the CPU (see instructions above) How does the training time compare to the default network training (section 4)? Why?
+     On CPU took 20 minutes and on GPU it took 12 minutes
+
+12. Try the training again, but this time do export ARCHITECTURE="inception_v3" Are CPU and GPU training times different?
+    The CPU time took 39 minutes and GPU took time 30 minutes on the original flower photos
+
+13. Given the hints under the notes section, if we trained Inception_v3, what do we need to pass to replace ??? below to the label_image script? Can we also glean the answer from examining TensorBoard?
+    We need to set the values to (299,299) since the script was originally trained on images with that size
