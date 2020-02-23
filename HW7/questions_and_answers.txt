@@ -1,0 +1,21 @@
+1. Describe your solution in detail. What neural network did you use? What dataset was it trained on?
+   What accuracy does it achieve?
+   
+   Ans: I used the mobile SSD based face detector provided in the repo: https://github.com/yeephycho/tensorflow-face-detection.git
+   The model was trained on WIDERFACE dataset
+
+2. Does it achieve reasonable accuracy in your empirical tests? 
+   Would you use this solution to develop a robust, production-grade system?
+   
+   Ans: It provided reasonable accuracy in my tests. I ran it in a loop to detect faces in 30 different images.
+        It appeared to do well in natural light when the lightsource was not optimally located
+        However for a production grade system I would need to test its speed and accuracy for processing images.
+        My tests have all been for sequential images 
+
+
+3. What framerate does this method achieve on the Jetson? Where is the bottleneck?
+   Ans: 4 fps, the bottleneck i noticed is with image capture from the streaming video on the webcam 
+
+
+4. Which is a better quality detector: the OpenCV or yours?
+   Ans: The Neural network based image detector is better
