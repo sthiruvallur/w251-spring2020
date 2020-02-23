@@ -14,7 +14,7 @@
 
 
 3. What framerate does this method achieve on the Jetson? Where is the bottleneck?
-   Ans: 4 fps, the bottleneck i noticed is with image capture from the streaming video on the webcam 
+   Ans: the bottleneck i noticed is with image capture from the streaming video on the webcam 
 
 
 4. Which is a better quality detector: the OpenCV or yours?
