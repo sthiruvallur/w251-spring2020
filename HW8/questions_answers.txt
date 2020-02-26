@@ -1,0 +1,48 @@
+Part 1
+--------------------------------------
+
+		1. In the time allowed, how many images did you annotate?
+		    152 images
+
+		2. Home many instances of the Millennium Falcon did you annotate? How many TIE Fighters?
+		    Millenium Falcons: 108
+		     grep "Millenium" videoplayback????.xml | wc -l
+
+		    TIE Fighters: 146
+		     grep "TIE_fighters" videoplayback????.xml | wc -l 
+		  
+		3. Based on this experience, how would you handle the annotation of large image data set?
+		    This is too tedious and error prone to be done manually. I would use image detection methods presumely with deep learning neural networks to accomplish this
+
+		4. Think about image augmentation? How would augmentations such as flip, rotation, scale, cropping, and translation effect the annotations?
+		     These augmentations present a challenge since they signficantly alter the perception of the image. This is a challenge during annotation since we need to ensure that all views of the object being annotated are understood and handled.
+
+		     Inadequate effort during annotation can affect the quality of the results produced by trained model that is reliant on these annotations
+
+
+Part 2
+----------------------------------------- 
+
+		1. Describe the following augmentations in your own words
+			a. Flip
+			    Consider the 2D image plotted in 3D. There will be axes x,y,z. Flip is essentially rotation of the image acrosss axis 'z' axes
+		    b.  Rotation
+		         This is essentially plotting the image on a (x,y) plot ensuring the origin (0,0) is placed at the center of the image. The rotation is now obtained by shifting the image clockwise for the positive degrees and counter clockwise for the negative degrees provided.
+		    c. Scale
+		         This is resizing the image to a fraction of its current size. The fraction can be used to reduce (1/10, 1/5, 1/4) or the increase (3/2, 2/1, 5/1) the size of the image
+            d. Crop
+                 This is to extract a contiguous portion of the image present anywhere on the surface of the original image. The size of the crop can be anywhere from 0 to the actual size of the original image.
+            e. Translation
+                 The image is again placed on a (x,y) axis by centering the image around (0,0). However the graph based on the center 
+                 (0,0) is now moved by translation factor along the x and y dimensions
+            f.  Noise
+                  This is action of disturbing the original image by altering the values of the pixels on the image 
+
+Part 3
+-----------------------------------------
+        1. Image annotations require the coordinates of the objects and their classes; in your option, what is needed for an audio annotation? 
+              Audio annotations would require 
+                -- start timestamp
+                -- end timestamp 
+                -- sound type (steam engine, elephant trumpet)
+                -- intensity (loud, mild, moderate)
