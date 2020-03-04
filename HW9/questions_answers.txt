@@ -1,0 +1,41 @@
+1. How long does it take to complete the training run? (hint: this session is on distributed training, so it will take a while)
+
+  Based on the 1785 minutes it took to run 61,600 steps I estimate it will take 8693 minutes or 144 hours or 6 days to complete training
+
+2. Do you think your model is fully trained? How can you tell?
+  I believe it is fully trained since i see both the training and eval loss is oscillating. Ever since we crossed 40,000 steps the loss has spiking up and down
+
+
+3. Were you overfitting?
+  We are not overfitting since the training loss and validation loss are not that different
+ 
+
+4. Were your GPUs fully utilized?
+   Yes , please reference the file "hw09_nvidia_gpu_utilization.png" under the screenshots_tensor_board directory. You shall see both GPUs being reported as 100% utilized by nvidia-smi
+
+
+5. Did you monitor network traffic (hint: apt install nmon ) ? Was network the bottleneck?
+   Yes, I used nmon stats on the Node 1 . I noticed that Recv=KB/s and Trans=KB/s very close to Peak->Recv and Trans values . This indicates that we are maxing out on the limits that network interface can support and can benefit from a higher performance interface
+
+
+6. Take a look at the plot of the learning rate and then check the config file. Can you explan this setting?
+
+
+7. How big was your training set (mb)? How many training lines did it contain?
+
+
+
+8. What are the files that a TF checkpoint is comprised of?
+
+
+9. How big is your resulting model checkpoint (mb)?
+  337 MB ??
+
+
+10. Remember the definition of a "step". How long did an average step take?
+  It took around 1.724 seconds
+
+
+11. How does that correlate with the observed network utilization between nodes?
+  
+
