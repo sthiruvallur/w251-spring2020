@@ -1,6 +1,6 @@
 1. How long does it take to complete the training run? (hint: this session is on distributed training, so it will take a while)
 
-  Based on the 1785 minutes it took to run 61,600 steps I estimate it will take 8693 minutes or 144 hours or 6 days to complete training
+   Based on the 1785 minutes it took to run 61,600 steps I estimate it will take 8693 minutes or 144 hours or 6 days to complete training
 
 2. Do you think your model is fully trained? How can you tell?
   I believe it is fully trained since i see both the training and eval loss is oscillating. Ever since we crossed 40,000 steps the loss has spiking up and down
@@ -19,23 +19,28 @@
 
 
 6. Take a look at the plot of the learning rate and then check the config file. Can you explan this setting?
+   Looking at the plot, it looks like the learning rate can be set a lot lower than it is
 
 
 7. How big was your training set (mb)? How many training lines did it contain?
+    The source train.en file was 607 MB while train.de is 678 MB. The number of lines is 4562102
 
-
-
-8. What are the files that a TF checkpoint is comprised of?
+8. What are the files that a TF checkpoint is comprised of?  
+     Consists of 
+      - meta  :  contains the saved graph structure
+      - index :  contains mapping between each Tensor and a serialized value
+      - data  :  contains values of all variables
 
 
 9. How big is your resulting model checkpoint (mb)?
-  337 MB ??
+     697 MB
 
 
 10. Remember the definition of a "step". How long did an average step take?
-  It took around 1.724 seconds
+    It took around 1.724 seconds
 
 
 11. How does that correlate with the observed network utilization between nodes?
+     I calculated about 350 MB of data was being transferred between nodes during a step
   
 
