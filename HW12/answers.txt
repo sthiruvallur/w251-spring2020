@@ -1,0 +1,11 @@
+1. How much disk space is used after step 4?
+   6.7G. However, I was only able to complete until step 3 . My US download is still going.
+ 
+2. Did you parallelize the crawlers in step 4? If so, how?
+   I have not gotten to this
+
+3. Describe the steps to de-duplicate the web pages you crawled.
+   I have not gotten to this but considering the huge number of files, I have used a Map reduce operation to distribute and parallelize this workload
+
+4. Submit the list of files you that your LazyNLP spiders crawled (ls -la)
+   The list of files are present in files_crawled.out in the same directory
