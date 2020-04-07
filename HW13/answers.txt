@@ -1,0 +1,3 @@
+Training 100 epochs took 9 hours 50 minutes
+
+Top 1 Accuracy 57.621 Top 5 Accuracy 88.282
