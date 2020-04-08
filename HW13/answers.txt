@@ -1,3 +1,16 @@
-Training 100 epochs took 9 hours 50 minutes
+1. Training for 100 epochs with default batch size of 8 
+    Total time : 9 hours 50 minutes
+    Top 1 Accuracy 57.621 
+    Top 5 Accuracy 88.282
 
-Top 1 Accuracy 57.621 Top 5 Accuracy 88.282
+2. Can you increase batch size. Why ?
+     Yes, since the maximum size of an image is less than 1 MB. Default batch size of 8 will be 8 MB. TX2 has usable RAM of atleast 4-5 GB, We can increase the batch size to 40 
+   
+    obtained through this command: `ls -ltrh /root/datasets/PlantCLEF_Subset/train/*/*.jpg | awk '{print $5}' | sort -rn | less`
+
+3. Training for 100 epochs with batch size of 40
+   Total time: 7 hours 23 minutes
+   Top 1 Accuracy 46.344
+   Top 5 Accuracy 78.414
+    
+   
